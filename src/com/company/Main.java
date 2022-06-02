@@ -13,6 +13,7 @@ public class Main {
    conventer.numericArrayToList();
    conventer.getList();
    conventer.printList();
+
     }
 }
 

@@ -50,6 +50,7 @@ convertedList = arrayList; //work
 
         System.out.println("Print from metod"+convertedList);
 
+
         //  printList() печатает его в консоль построчно
         }
 
