@@ -1,19 +1,33 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.Array;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+        Printer<String> stringPrinterprinter = new Printer<>("Printed test from Main = String");
+        // stringPrinterprinter.print();
 
-   Conventer<Double> conventer = new Conventer(7.2);
-       // ArrayList<Double> arrayList = new ArrayList<>();
-       // arrayList.add(22.44);
-      //  System.out.println(arrayList);
-   conventer.numericArrayToList();
-   conventer.getList();
-   conventer.printList();
+        Integer[] arr = {1, 2, 7};
+        Printer<Integer[]> integerPrinter = new Printer<>(arr);
+        integerPrinter.arrToList(arr);
+        integerPrinter.getSomething();
+        //      integerPrinter.print();
+//
+        //       System.out.println("Print iz meina "+integerPrinter);
 
+// try from massive to araysList her is working
+        List<Integer> arrayList = new ArrayList();
+        arrayList = Arrays.asList(arr);
+        //      System.out.println("Print from main test 2 "+arrayList);
+
+        Conventer<Integer[]> conventer = new Conventer<>(arr);
+        conventer.numericArrayToList(arr);
+        conventer.getConvertedList();
+        conventer.printList();
     }
 }
+
+
+
 
